@@ -30,62 +30,75 @@ function computerChoice() {
     
 }
 
-function playGame(player) {
-    player = player.toLowerCase();
-    switch (player) {
+    for (let index = 0; index < 5; index++) {
+        playGame(playerHand = prompt("Please Pick 'Rock', 'Paper', or 'Scissors'.")); 
+        console.log("Computer:" + computerWonGames + "You:" + playerWonGames);
+        if (computerWonGames >= 3){
+            console.log("The Computer Won, You Lose.")
+            index = 5;
+        }
+
+        else
+        if (playerWonGames >= 3){
+            console.log("You Won, Congrats");
+            index = 5;
+        }
+       
+    }
+
+function playGame() {
+        
+    
+    playerHand = playerHand.toLowerCase();
+    switch (playerHand) {
         case 'rock':
             computerChoice();
-            if (num === 1) {return("It's a Draw")}
+            if (num === 1) {console.log("It's a Draw")}
         else
-            if (num === 2) {return("You lose")
-                            computerWonGames}
+            if (num === 2) {computerWonGames++;   
+                            console.log("You lose");
+                            }
         else
-            if (num === 3) {return("You Win")}
+            if (num === 3) {playerWonGames++;
+                            console.log("You Win.")}
 
             break;
 
         case 'paper':
+
             computerChoice();
 
-            if (num === 1) {return("You Win.")}
+            if (num === 1) {playerWonGames++;
+                            console.log("You Win.")}
         else
-            if (num === 2) {return("It's a Draw.")}
+            if (num === 2) {console.log("It's a Draw.")}
         else
-            if (num === 3) {return("You Lose.")}
+            if (num === 3) {computerWonGames++
+                            console.log("You Lose.")}
+
+
         
             break;
 
             case 'scissors':
+
                 computerChoice();
 
-            if (num === 1) {return("You Lose.")}
+            if (num === 1) {computerWonGames++;
+                            return("You Lose.")}
         else
-            if (num === 2) {return("You Win.")}
+            if (num === 2) {playerWonGames++
+                            return("You Win.")}
         else
             if (num === 3) {return("It's a Draw.")}
-        
+
             break;
 
         default:
-            console.log("Please pick 'Rock', 'Paper', or 'Scissors'.")
-                break;
-    
+                console.log("Please pick 'Rock', 'Paper', or 'Scissors'.")
     }
     
 }
-
-
-
-// function playGame(player) {
-//     computerChoice();
-//     playerHand = player.toLowerCase();
-//     if (num === 1 && playerHand === 'rock') {console.log("It's a Draw")}
-//     else 
-//     if (num === 2 && playerHand === 'rock')
-//     }
-    
-    
-
 
 
 
