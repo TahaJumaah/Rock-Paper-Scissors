@@ -2,8 +2,6 @@ let num = 0;
 let playerHand = 'rock';
 let playerWonGames = 0;
 let computerWonGames = 0;
-console.log('Please Pick "Rock" or "Paper" or "Scissors"');
-console.log("Use playGame(YourPick) to play.");
 
 
 function computerChoice() {
@@ -13,16 +11,16 @@ function computerChoice() {
     pickedHand();
     function pickedHand() {
         if (num === 1) {
-            console.log('Computer Picked Rock')
+            document.write('<br>Computer Picked Rock <br>')
         }
     
         else 
         if (num === 2) {
-            console.log('Computer Picked Paper')
+            document.write('<br>Computer Picked Paper <br>')
         }
     
         else {
-            console.log('Computer Picked Scissors')
+            document.write('<br>Computer Picked Scissors <br>')
         }
 }
 
@@ -32,15 +30,15 @@ function computerChoice() {
 
     for (let index = 0; index < 5; index++) {
         playGame(playerHand = prompt("Please Pick 'Rock', 'Paper', or 'Scissors'.")); 
-        console.log("Computer:" + computerWonGames + "You:" + playerWonGames);
+        document.write("Computer:" + computerWonGames + "You:" + playerWonGames);
         if (computerWonGames >= 3){
-            console.log("The Computer Won, You Lose.")
+            document.write("The Computer Won, You Lose.")
             index = 5;
         }
 
         else
         if (playerWonGames >= 3){
-            console.log("You Won, Congrats");
+            document.write("You Won, Congrats");
             index = 5;
         }
        
@@ -53,14 +51,14 @@ function playGame() {
     switch (playerHand) {
         case 'rock':
             computerChoice();
-            if (num === 1) {console.log("It's a Draw")}
+            if (num === 1) {document.write("It's a Draw. <br>")}
         else
             if (num === 2) {computerWonGames++;   
-                            console.log("You lose");
+                            document.write("You lose. <br>");
                             }
         else
             if (num === 3) {playerWonGames++;
-                            console.log("You Win.")}
+                            document.write("You Win. <br>")}
 
             break;
 
@@ -69,12 +67,12 @@ function playGame() {
             computerChoice();
 
             if (num === 1) {playerWonGames++;
-                            console.log("You Win.")}
+                            document.write("You Win. <br>")}
         else
-            if (num === 2) {console.log("It's a Draw.")}
+            if (num === 2) {document.write("It's a Draw. <br>")}
         else
             if (num === 3) {computerWonGames++
-                            console.log("You Lose.")}
+                            document.write("You Lose. <br>")}
 
 
         
@@ -85,17 +83,17 @@ function playGame() {
                 computerChoice();
 
             if (num === 1) {computerWonGames++;
-                            return("You Lose.")}
+                document.write("You Lose. <br>")}
         else
             if (num === 2) {playerWonGames++
-                            return("You Win.")}
+                document.write("You Win. <br>")}
         else
-            if (num === 3) {return("It's a Draw.")}
+            if (num === 3) {document.write("It's a Draw. <br>")}
 
             break;
 
         default:
-                console.log("Please pick 'Rock', 'Paper', or 'Scissors'.")
+                document.write("Please pick 'Rock', 'Paper', or 'Scissors'.")
     }
     
 }
