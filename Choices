@@ -1,0 +1,29 @@
+Player picks either 
+
+Rock
+if computer picked rock === DRAW
+if Computer picked paper === Loss
+if computer picked Scissors === WIN
+
+Paper
+if computer picked rock === WIN
+if Computer picked paper === DRAW
+if computer picked Scissors === Loss
+
+
+Scissors
+if computer picked rock === LOSS
+if Computer picked paper === WIN
+if computer picked Scissors === DRAW
+
+
+Computer picks either
+
+
+Rock 
+
+
+Paper
+
+
+Scissors
