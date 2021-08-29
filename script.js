@@ -11,16 +11,16 @@ function computerChoice() {
     pickedHand();
     function pickedHand() {
         if (num === 1) {
-            document.write('<br>Computer Picked Rock <br>')
+            document.write('<br>Computer Picked Rock ')
         }
     
         else 
         if (num === 2) {
-            document.write('<br>Computer Picked Paper <br>')
+            document.write('<br>Computer Picked Paper ')
         }
     
         else {
-            document.write('<br>Computer Picked Scissors <br>')
+            document.write('<br>Computer Picked Scissors ')
         }
 }
 
@@ -28,9 +28,10 @@ function computerChoice() {
     
 }
 
-    for (let index = 0; index < 5; index++) {
+    for (let index = 1; index < 6; index++) {
+        document.write("<br> Round " + index + "<br>");
         playGame(playerHand = prompt("Please Pick 'Rock', 'Paper', or 'Scissors'.")); 
-        document.write("Computer:" + computerWonGames + "You:" + playerWonGames);
+        document.write("Computer:" + computerWonGames + "You:" + playerWonGames + "<br>");
         if (computerWonGames >= 3){
             document.write("The Computer Won, You Lose.")
             index = 5;
@@ -51,6 +52,7 @@ function playGame() {
     switch (playerHand) {
         case 'rock':
             computerChoice();
+            document.write("You Picked Rock<br>")
             if (num === 1) {document.write("It's a Draw. <br>")}
         else
             if (num === 2) {computerWonGames++;   
@@ -63,7 +65,7 @@ function playGame() {
             break;
 
         case 'paper':
-
+            document.write("<br>You Picked Paper");
             computerChoice();
 
             if (num === 1) {playerWonGames++;
@@ -79,7 +81,7 @@ function playGame() {
             break;
 
             case 'scissors':
-
+                document.write("<br>You Picked Scissors")
                 computerChoice();
 
             if (num === 1) {computerWonGames++;
@@ -93,7 +95,7 @@ function playGame() {
             break;
 
         default:
-                document.write("Please pick 'Rock', 'Paper', or 'Scissors'.")
+                document.write("<br>Please pick 'Rock', 'Paper', or 'Scissors'.")
     }
     
 }
